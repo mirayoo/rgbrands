@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
+import './index.css';
 
-function App() {
+import Main from './pages/uz/Main';
+import FirstStep from "./pages/uz/FirstStep";
+import SecondStep from "./pages/uz/SecondStep";
+import ThirdStep from "./pages/uz/ThirdStep";
+import Auth from "./pages/uz/Auth";
+
+function App(props) {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Router>
+      <Routes>
+        <Route index element={<Main />} />
+        <Route path="first-step" element={<FirstStep />} />
+        <Route path="second-step" element={<SecondStep />} />
+        <Route path="third-step" element={<ThirdStep />} />
+        <Route path="form" element={<Auth />} />
+      </Routes>
+    </Router>
+  )
 }
 
 export default App;
