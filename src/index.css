@@ -462,6 +462,16 @@ body {
     background:  url("./assets/arrow-down.svg")no-repeat right 15px center/20px 10px, linear-gradient(0deg, #DBDBDB 18.5%, #F0F0F0 89.71%);
 }
 
+.form select::-webkit-scrollbar-thumb {
+    background: #113DB9;
+    border-radius: 5px;
+}
+
+.form select::-webkit-scrollbar {
+    background: #fff;
+    width: 6px;
+}
+
 .form-city,
 .form-phone {
     flex: 1 1 45%;
@@ -608,6 +618,116 @@ body {
     margin-top: 20px;
     margin-bottom: 65px;
     margin-right: auto;
+}
+
+/******* THANKS BLOCK UZ ********/
+
+.hero-thanks-bg {
+    height: 90vh;
+    background:
+            url("./assets/bg-circle-large.png") no-repeat right top -90px/50% 70%,
+            url("./assets/bg-circle-thin.png") no-repeat right top/70% 70%,
+            url("./assets/header-yellow-bg-ru.png") no-repeat left top/100% 80%,
+            url("./assets/header-blue-bg-ru.png") no-repeat center bottom 20%/120% 80%;
+}
+
+.thanks-heading {
+    position: absolute;
+    top: 220px;
+    left: 0;
+    right: 0;
+    width: auto;
+}
+
+.thanks-comma {
+    position: absolute;
+}
+
+.thanks-comma-1 {
+    width: 33px;
+    top: 13px;
+    left: 45px;
+}
+
+.thanks-comma-2 {
+    width: 11px;
+    top: 8px;
+    left: 88px;
+}
+
+.thanks-comma-3 {
+    width: 27px;
+    bottom: 16px;
+    right: 92px;
+}
+
+.thanks-comma-4 {
+    width: 15px;
+    bottom: 2px;
+    right: 138px;
+}
+
+.thanks-comma-5 {
+    width: 20px;
+    bottom: 6px;
+    left: 38px;
+}
+
+.thanks-left-img {
+    max-width: 30%;
+    bottom: 160px;
+}
+
+.thanks-right-img {
+    right: 60px;
+    bottom: 50px;
+    top: 50px;
+    max-width: 35%
+}
+
+/******* CONFIRM BLOCK UZ ********/
+
+.confirm-label {
+    margin-top: 40px;
+}
+
+/******* SHARE BLOCK UZ ********/
+
+.share-block {
+    margin-bottom: 120px;
+}
+.socials {
+    position: relative;
+    width: 700px;
+    max-width: 90%;
+    margin: auto;
+}
+
+.social-link {
+    position: absolute;
+    padding-top: 30px;
+    top: 0;
+    width: 250px;
+}
+
+.whatsapp-link {
+    left: 0;
+}
+
+.telegram-link {
+    right: 0;
+}
+
+.social-arrow-left {
+    position: absolute;
+    top: -30px;
+    left: 0;
+}
+
+.social-arrow-right {
+    position: absolute;
+    top: -30px;
+    right: 0;
 }
 
 @media screen and (max-width: 991px) {
@@ -792,6 +912,53 @@ body {
     .form-button {
         order: 7;
     }
+    /******* THANKS BLOCK UZ TABLET ********/
+
+    .hero-thanks-bg {
+        min-height: 100vh;
+        overflow: auto;
+        overflow-x: hidden;
+        background:
+                url("./assets/header-yellow-bg-ru.png") no-repeat center top/100% 80%,
+                url("./assets/header-blue-bg-mob-ru.png") no-repeat center top/100% 100%;
+    }
+
+    .thanks-heading {
+        height: auto;
+        top: 240px;
+        width: 100%;
+    }
+
+    .thanks-left-img {
+        bottom: auto;
+        top: 120px;
+        width: 250px;
+        max-width: 40%;
+    }
+
+    .thanks-right-img {
+        bottom: auto;
+        top: 120px;
+        width: 250px;
+        max-width: 40%;
+    }
+
+    /******* CONFIRM BLOCK UZ TABLET ********/
+
+    .confirm-input ::placeholder {
+        text-align: center;
+    }
+
+    /******* SHARE BLOCK UZ TABLET ********/
+
+    .share-block {
+        min-height: 100vh;
+        padding-top: calc(20px + 14%);
+        padding-bottom: 0;
+        margin-bottom: 0;
+        background: url("./assets/base-blue.png") no-repeat top 150px center/100% 500px, url("./assets/main-blue.png") no-repeat top center/100% 550px;
+    }
+
 }
 
 @media screen and (max-width: 767px) {
@@ -1021,4 +1188,133 @@ body {
     .form select {
         background:  url("./assets/arrow-down.svg")no-repeat right 10px center/10px 10px, linear-gradient(0deg, #DBDBDB 18.5%, #F0F0F0 89.71%);
     }
+
+    /******* THANKS BLOCK UZ MOBILE ********/
+
+    .hero-thanks-bg {
+        min-height: 100vh;
+        overflow: auto;
+        overflow-x: hidden;
+        background:
+                url("./assets/header-yellow-bg-ru.png") no-repeat center top/150% 800px,
+                url("./assets/header-blue-bg-mob-ru.png") no-repeat right top/150% 1000px;
+    }
+
+    .thanks-heading {
+        top: 330px;
+    }
+
+    .thanks-comma-1 {
+        width: 17px;
+    }
+
+    .thanks-comma-2 {
+        width: 7px;
+    }
+
+    .thanks-comma-3 {
+        width: 17px;
+    }
+
+    .thanks-comma-4 {
+        width: 9px;
+    }
+
+    .thanks-comma-5 {
+        width: 12px;
+    }
+
+    .thanks-right-img {
+        position: absolute;
+        right: 20px;
+        bottom: 50px;
+        top: 250px;
+        left: auto;
+        max-width: 35%;
+        transform: none;
+    }
+
+    .thanks-left-img {
+        position: absolute;
+        left: 20px;
+        bottom: 50px;
+        top: 100px;
+        right: auto;
+        max-width: 35%;
+        transform: none;
+    }
+
+    /******* CONFIRM BLOCK UZ MOBILE ********/
+
+    .confirm-comma-1 {
+        width: 20px;
+        left: -20px;
+        top: -24px;
+    }
+
+    .confirm-comma-2 {
+        left: -6px;
+        top: -25px;
+        height: 17px;
+    }
+
+    .confirm-comma-3 {
+        right: 2px;
+        top: -34px;
+        height: 25px;
+    }
+
+    .confirm-comma-4 {
+        right: -16px;
+        top: -22px;
+        width: 20px;
+        height: 30px;
+    }
+
+    .confirm-comma-5 {
+        right: 7px;
+        bottom: -22px;
+        width: 15px;
+        height: 14px;
+    }
+
+    .confirm-comma-6 {
+        left: -3px;
+        bottom: -27px;
+        width: 17px;
+        height: 30px;
+    }
+
+    /******* SHARE BLOCK UZ MOBILE ********/
+
+    .share-block {
+        min-height: 70vh;
+        padding-bottom: 0;
+        margin-bottom: 0;
+        background: url("./assets/base-blue.png") no-repeat top 150px center/200% 450px, url("./assets/main-blue.png") no-repeat top center/100% 500px;
+    }
+
+    .social-arrow-left,
+    .social-arrow-right {
+        height: 30%;
+    }
+
+    .whatsapp-link {
+        max-width: 35%;
+    }
+
+    .telegram-link {
+        max-width: 35%;
+    }
+
+    .share-title {
+        display: block;
+        margin: auto;
+    }
+
+    .share-subtitle {
+        display: block;
+        margin: auto;
+    }
+
 }

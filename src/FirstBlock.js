@@ -10,7 +10,6 @@ import Rules from './assets/rules.png';
 import RU from './assets/ru.png';
 
 function FirstBlock(props) {
-
   return (
     <div className="hero-secondary">
       <div className="wrapper ">
