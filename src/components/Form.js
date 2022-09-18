@@ -38,7 +38,7 @@ function Form(props) {
   }
 
   return (
-    <div className="hero-secondary hero-form-bg">
+    <div>
       <img className="form-title" src={props.formTitle} alt="" />
       <form className="form" onSubmit={handleSubmit(onSubmit)}>
 
