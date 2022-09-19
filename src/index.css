@@ -3,6 +3,10 @@
     max-width: 100%;
 }
 
+html,body {
+    min-height: 100vh;
+}
+
 body {
     width: 100%;
     height: 100%;
@@ -11,6 +15,12 @@ body {
     margin: 0;
     padding: 0;
     background: #fff;
+}
+
+.langName {
+    color: #113db9;
+    font-weight: 700;
+    font-size: 20px;
 }
 
 .clearfix {
@@ -977,6 +987,9 @@ body {
     .header-nav .button img {
         max-height: 20px;
     }
+    .nav-secondary :nth-child(2) {
+        padding: 0 8px;
+    }
     .phone-icon {
         max-width: 20px;
         margin-right: 4px;
@@ -1316,5 +1329,7 @@ body {
         display: block;
         margin: auto;
     }
-
+    .langName {
+        font-size: 14px;
+    }
 }

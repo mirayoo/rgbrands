@@ -1,0 +1,69 @@
+{
+  "header": {
+    "title": "../../../assets/uz-heading-ru.png",
+    "rules": "../../../assets/rules.png"
+  },
+  "hero": {
+    "firstTitle": "../../../assets/uz-first-step-heading-ru.png",
+    "secondTitle": "../../../assets/uz-second-step-heading-ru.png",
+    "thirdTitle": "../../../assets/uz-third-step-heading-ru.png",
+    "formTitle": "../../../assets/uz-form-title-ru.png",
+    "firstSubtitle": "../../../assets/uz-first-step-subheading-ru.png",
+    "formSubtitle": "../../../assets/uz-form-subtitle-ru.png",
+    "formSubtitleMob": "../../../assets/uz-form-subtitle-mob-ru.png"
+  },
+  "secondBlock": {
+    "textBlock": "../../../assets/uz-blue-text-block-ru.png",
+    "textBlockMob": "../../../assets/uz-blue-text-block-mob-ru.png",
+    "vote": "../../../assets/vote.png",
+    "heading1": "../../../assets/uz-list-title-1-ru.png",
+    "heading2": "../../../assets/uz-list-title-2-ru.png",
+    "heading3": "../../../assets/uz-list-title-3-ru.png",
+    "heading4": "../../../assets/uz-list-title-4-ru.png",
+    "heading5": "../../../assets/uz-list-title-5-ru.png",
+    "heading6": "../../../assets/uz-list-title-6-ru.png",
+    "heading7": "../../../assets/uz-list-title-7-ru.png",
+    "heading8": "../../../assets/uz-list-title-8-ru.png",
+    "subheading1": "../../../assets/uz-list-subtitle-1-ru.png",
+    "subheading2": "../../../assets/uz-list-subtitle-2-ru.png",
+    "subheading3": "../../../assets/uz-list-subtitle-3-ru.png",
+    "subheading4": "../../../assets/uz-list-subtitle-4-ru.png",
+    "subheading5": "../../../assets/uz-list-subtitle-5-ru.png",
+    "subheading6": "../../../assets/uz-list-subtitle-6-ru.png",
+    "mobHeading1": "../../../assets/uz-list-title-mob-1-ru.png",
+    "mobHeading2": "../../../assets/uz-list-title-mob-2-ru.png",
+    "mobHeading3": "../../../assets/uz-list-title-mob-3-ru.png",
+    "mobHeading4": "../../../assets/uz-list-title-mob-4-ru.png",
+    "mobHeading5": "../../../assets/uz-list-title-mob-5-ru.png",
+    "mobHeading6": "../../../assets/uz-list-title-mob-6-ru.png",
+    "mobHeading7": "../../../assets/uz-list-title-mob-7-ru.png",
+    "mobHeading8": "../../../assets/uz-list-title-mob-8-ru.png",
+    "mobSubheading1": "../../../assets/uz-list-subtitle-mob-1-ru.png",
+    "mobSubheading2": "../../../assets/uz-list-subtitle-mob-2-ru.png",
+    "mobSubheading3": "../../../assets/uz-list-subtitle-mob-3-ru.png",
+    "mobSubheading4": "../../../assets/uz-list-subtitle-mob-4-ru.png",
+    "mobSubheading5": "../../../assets/uz-list-subtitle-mob-5-ru.png",
+    "mobSubheading6": "../../../assets/uz-list-subtitle-mob-6-ru.png"
+  },
+  "thirdBlock": {
+    "cafe": "../../../assets/uz-title-blue-ru.png"
+  },
+  "form": {
+    "formTitle": "../../../assets/uz-form-heading-ru.png",
+    "formConfirm": "../../../assets/uz-phone-confirm-button-ru.png",
+    "city":  "../../../assets/uz-city-label-ru.png",
+    "number":  "../../../assets/uz-number-label-ru.png",
+    "gender":  "../../../assets/uz-gender-label-ru.png",
+    "age":  "../../../assets/uz-age-label-ru.png",
+    "phoneConfirm":  "../../../assets/uz-phone-confirm-text-ru.png",
+    "phoneConfirmMob":  "../../../assets/uz-phone-confirm-text-mob-ru.png",
+    "approve":  "../../../assets/uz-approve-ru.png",
+    "firstCheck":  "../../../assets/uz-first-check-ru.png",
+    "secondCheck":  "../../../assets/uz-second-check-ru.png",
+    "otpForm":  "../../../assets/uz-form-confirm-ru.png",
+    "male":  "Муж",
+    "female":  "Жен",
+    "older":  "старше",
+    "cities": "../../../uz-cities-ru.json"
+  }
+}

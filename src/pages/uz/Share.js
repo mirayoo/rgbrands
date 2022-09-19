@@ -3,7 +3,7 @@ import '../../index.css';
 
 import Hero from '../../Hero';
 
-import Heading from '../../assets/heading-ru.png';
+import Heading from '../../assets/uz-heading-ru.png';
 import { Link } from "react-router-dom";
 import ContHeading from "../../assets/uz-share-title-ru.png";
 import ContSubHeading from "../../assets/uz-share-subtitle-ru.png";
