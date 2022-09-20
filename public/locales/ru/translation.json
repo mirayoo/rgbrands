@@ -10,7 +10,12 @@
     "formTitle": "../../../assets/uz-form-title-ru.png",
     "firstSubtitle": "../../../assets/uz-first-step-subheading-ru.png",
     "formSubtitle": "../../../assets/uz-form-subtitle-ru.png",
-    "formSubtitleMob": "../../../assets/uz-form-subtitle-mob-ru.png"
+    "formSubtitleMob": "../../../assets/uz-form-subtitle-mob-ru.png",
+    "thanks": "../../../assets/uz-thanks-ru.png",
+    "confirmTitle": "../../../assets/uz-confirm-heading-ru.png",
+    "confirmHeading": "../../../assets/uz-confirm-title-ru.png",
+    "confirmSubheading": "../../../assets/uz-confirm-subtitle-ru.png",
+    "confirmSubheadingMob": "../../../assets/uz-confirm-subtitle-mob-ru.png"
   },
   "secondBlock": {
     "textBlock": "../../../assets/uz-blue-text-block-ru.png",
@@ -64,6 +69,14 @@
     "male":  "Муж",
     "female":  "Жен",
     "older":  "старше",
-    "cities": "../../../uz-cities-ru.json"
+    "cities": "../../../uz-cities-ru.json",
+    "confirmLabel": "../../../assets/uz-confirm-label-ru.png",
+    "fullName": "Ваша Фамилия и Имя"
+  },
+  "share": {
+    "title": "../../../assets/uz-share-title-ru.png",
+    "subtitle": "../../../assets/uz-share-subtitle-ru.png",
+    "mobTitle": "../../../assets/uz-share-title-mob-ru.png",
+    "mobSubtitle": "../../../assets/uz-share-subtitle-mob-ru.png"
   }
 }

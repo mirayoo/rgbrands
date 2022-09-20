@@ -5,7 +5,7 @@ import '../index.css';
 function ListItem(props) {
 
   return (
-      <Link to={props.navLink} className="list-item">
+      <Link to={props.navLink}>
         <picture>
           <source media="(max-width:767px)" srcSet={props.titleMob}/>
           <img className="list-item-title" src={props.title} alt="" />

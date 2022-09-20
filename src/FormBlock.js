@@ -7,7 +7,6 @@ import OTPInput, { ResendOTP } from "otp-input-react";
 import { useTranslation } from "react-i18next";
 import './index.css';
 
-import ScrollToButton from "./components/ScrollToButton";
 import Switcher from './components/Switcher';
 
 import PhoneCall from './assets/phone-call.png';
@@ -58,7 +57,7 @@ function FormBlock(props) {
       <div className="wrapper ">
         <div className="header-nav nav-secondary">
           <a className="button button-secondary button-phone" href="tel:1309"><img className="phone-icon" src={PhoneCall} alt="" /><img className="phone-number" src={PhoneNumber} alt="" /></a>
-          <ScrollToButton duration={500} toId="content"><img src={t('header.rules')} alt="" /></ScrollToButton>
+          <a className="button" href="#"><img src={t('header.rules')} alt="" /></a>
           <Switcher imageUrl={RU}/>
         </div>
         <div className="form-hero">

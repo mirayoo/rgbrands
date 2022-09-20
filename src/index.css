@@ -1259,6 +1259,10 @@ body {
 
     /******* CONFIRM BLOCK UZ MOBILE ********/
 
+    .confirm-input ::placeholder {
+        font-size: 14px;
+    }
+
     .confirm-comma-1 {
         width: 20px;
         left: -20px;

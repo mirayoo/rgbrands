@@ -4,7 +4,7 @@ import { scrollTo } from "../utils";
 const ScrollToButton = ({ toId, toRef, duration, children }) => {
   const handleClick = () => scrollTo({ id: toId, ref: toRef, duration });
 
-  return <button className="button" onClick={handleClick}>{children}</button>;
+  return <div className="list-item" onClick={handleClick}>{children}</div>;
 };
 
 export default ScrollToButton;

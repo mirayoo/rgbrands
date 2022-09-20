@@ -10,7 +10,12 @@
     "formTitle": "../../../assets/uz-form-title-uz.png",
     "firstSubtitle": "../../../assets/uz-first-step-subheading-uz.png",
     "formSubtitle": "../../../assets/uz-form-subtitle-uz.png",
-    "formSubtitleMob": "../../../assets/uz-form-subtitle-mob-uz.png"
+    "formSubtitleMob": "../../../assets/uz-form-subtitle-mob-uz.png",
+    "thanks": "../../../assets/uz-thanks-uz.png",
+    "confirmTitle": "../../../assets/uz-confirm-heading-uz.png",
+    "confirmHeading": "../../../assets/uz-confirm-title-uz.png",
+    "confirmSubheading": "../../../assets/uz-confirm-subtitle-uz.png",
+    "confirmSubheadingMob": "../../../assets/uz-confirm-subtitle-mob-uz.png"
   },
   "secondBlock": {
     "textBlock": "../../../assets/uz-blue-text-block-uz.png",
@@ -64,6 +69,14 @@
     "male":  "erkak",
     "female":  "ayol",
     "older":  "Ko'proq",
-    "cities": "../../../uz-cities-uz.json"
+    "cities": "../../../uz-cities-uz.json",
+    "confirmLabel": "../../../assets/uz-confirm-label-uz.png",
+    "fullName": "Sizning familiyangiz va ismingiz"
+  },
+  "share": {
+    "title": "../../../assets/uz-share-title-uz.png",
+    "subtitle": "../../../assets/uz-share-subtitle-uz.png",
+    "mobTitle": "../../../assets/uz-share-title-mob-uz.png",
+    "mobSubtitle": "../../../assets/uz-share-subtitle-mob-uz.png"
   }
 }

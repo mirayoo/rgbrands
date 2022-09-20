@@ -2,10 +2,8 @@ import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import '../../index.css';
 
-import Heading from '../../assets/uz-thanks-ru.png';
 import PhoneCall from "../../assets/phone-call.png";
 import PhoneNumber from "../../assets/1309.png";
-import ScrollToButton from "../../components/ScrollToButton";
 import Rules from "../../assets/rules.png";
 import Switcher from "../../components/Switcher";
 import RU from "../../assets/ru.png";
@@ -16,8 +14,11 @@ import Comma2 from "../../assets/light-comma-2.png";
 import Comma3 from "../../assets/light-comma-3.png";
 import Comma4 from "../../assets/light-comma-4.png";
 import Comma5 from "../../assets/light-comma-5.png";
+import { useTranslation } from "react-i18next";
 
 function Thanks() {
+  const { t, i18n } = useTranslation();
+
   let navigate = useNavigate();
 
   useEffect(() => {
@@ -32,14 +33,14 @@ function Thanks() {
         <div className="header-nav nav-secondary">
           <a className="button button-phone" href="tel:1309"><img className="phone-icon" src={PhoneCall} alt="" /><img className="phone-number" src={PhoneNumber} alt="" /></a>
           <div className="heading thanks-heading">
-            <img src={Heading}/>
+            <img src={t('hero.thanks')}/>
             <img className="thanks-comma thanks-comma-1" src={Comma1} alt="" />
             <img className="thanks-comma thanks-comma-2" src={Comma2} alt="" />
             <img className="thanks-comma thanks-comma-3" src={Comma3} alt="" />
             <img className="thanks-comma thanks-comma-4" src={Comma4} alt="" />
             <img className="thanks-comma thanks-comma-5" src={Comma5} alt="" />
           </div>
-          <ScrollToButton duration={500} toId="content"><img src={Rules} alt="" /></ScrollToButton>
+          <a className="button" href="#"><img src={Rules} alt="" /></a>
           <Switcher imageUrl={RU}/>
         </div>
 

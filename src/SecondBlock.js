@@ -1,7 +1,6 @@
 import React from "react";
 import './index.css';
 
-import ScrollToButton from "./components/ScrollToButton";
 import Switcher from './components/Switcher';
 
 import PhoneCall from './assets/phone-call.png';
@@ -15,11 +14,11 @@ function SecondBlock(props) {
   return (
     <div className={props.heroBg}>
       <div className="wrapper ">
-        <div className="header-nav nav-secondary">
+        <div className="header-nav nav-secondary" id="header">
           <a className="button button-secondary button-phone" href="tel:1309"><img className="phone-icon" src={PhoneCall} alt="" /><img className="phone-number" src={PhoneNumber} alt="" /></a>
           <img className="heading-secondary" src={props.headingUrl}/>
           <img className="subheading-secondary" src={props.subheadingUrl}/>
-          <ScrollToButton duration={500} toId="content"><img src={t('header.rules')} alt="" /></ScrollToButton>
+          <a className="button" href="#"><img src={t('header.rules')} alt="" /></a>
           <Switcher imageUrl={RU}/>
         </div>
       </div>
