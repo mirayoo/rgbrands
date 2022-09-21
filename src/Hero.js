@@ -15,7 +15,7 @@ function Hero(props) {
   const { t, i18n } = useTranslation();
 
   return (
-    <div className="hero-primary">
+    <div className="hero-primary" id="header">
       <div className="wrapper ">
         <div className="header-nav">
           <a className="button button-phone" href="tel:1309"><img className="phone-icon" src={PhoneCall} alt="" /><img className="phone-number" src={PhoneNumber} alt="" /></a>

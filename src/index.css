@@ -66,6 +66,35 @@ body {
     padding-bottom: 650px;
 }
 
+.hero-kg {
+    background: url("./assets/caramel-top.png")no-repeat bottom center/cover,#FFBA0E;
+    padding-bottom: 0;
+}
+
+.hero-center-kg {
+    position: relative;
+    z-index: 30;
+    margin: auto;
+    max-width: 580px;
+    width: 50%;
+    top: -40px;
+}
+
+.hero-left-kg,
+.hero-right-kg {
+    width: 22%;
+    padding-top: 50px;
+    position: relative;
+    z-index: 30;
+}
+
+.hero-images-kg {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
 .button {
     margin-top: 30px;
 }
@@ -266,6 +295,16 @@ body {
 .footer-item-5 {
     background: linear-gradient(180deg, #FFFFFF 50%, #E3E3E3 100%), url("./assets/anjir.png") no-repeat center/calc(100% - 50px) auto;
     background-blend-mode: multiply;
+}
+
+.footer-kg {
+    margin-top: -295px;
+    background: url("../src/assets/caramel.png")no-repeat bottom center/cover;
+    padding-bottom: 60px;
+}
+
+.footer-title-kg {
+    padding-top: 320px;
 }
 
 /******* FIRST BLOCK UZ ********/
@@ -740,6 +779,25 @@ body {
     right: 0;
 }
 
+.hero-secondary-kg {
+    background:
+            url("./assets/caramel-quiz.png") no-repeat center top/100% 89%,
+            url("./assets/bg-quiz.png") no-repeat center top/100% 89%,
+            url("./assets/header-blue-bg-ru.png") no-repeat center bottom 45%/100% auto;
+    padding: 0;
+    height: 550px;
+    overflow: hidden;
+    position: relative;
+    z-index: 10;
+}
+
+.image-quiz {
+    position: absolute;
+    top: 24px;
+    right: 0;
+    width: 470px;
+}
+
 @media screen and (max-width: 991px) {
     .button {
         margin-top: 20px;
@@ -967,6 +1025,42 @@ body {
         padding-bottom: 0;
         margin-bottom: 0;
         background: url("./assets/base-blue.png") no-repeat top 150px center/100% 500px, url("./assets/main-blue.png") no-repeat top center/100% 550px;
+    }
+
+    /******* MAIN BLOCK KZ TABLET ********/
+
+    .footer-kg {
+        margin-top: -130px;
+        background: url("../src/assets/caramel.png")no-repeat bottom center/auto 150%;
+    }
+
+    .footer-title-kg {
+        padding-top: 160px;
+    }
+
+    .hero-images-kg {
+        padding-top: 200px;
+    }
+    .hero-left-kg, .hero-right-kg {
+        width: 20%;
+    }
+    .hero-arrow-left-kg, .hero-arrow-right-kg {
+        width: 10%;
+    }
+    .hero-secondary-kg {
+        background:
+                url("./assets/caramel-quiz.png") no-repeat center top/100% 69%,
+                url("./assets/bg-quiz.png") no-repeat center top/100% 69%,
+                url("./assets/header-blue-bg-ru.png") no-repeat center bottom 45%/100% auto;
+        padding: 0;
+        height: 550px;
+        overflow: hidden;
+        position: relative;
+        z-index: 10;
+    }
+    .image-quiz {
+        top: 150px;
+        width: 320px;
     }
 
 }
@@ -1335,5 +1429,87 @@ body {
     }
     .langName {
         font-size: 14px;
+    }
+
+    .hero-kg {
+        padding-bottom: 200px;
+    }
+
+    .hero-images-kg {
+        flex-wrap: wrap;
+    }
+
+    .hero-center-kg {
+        width: 100%;
+        flex: 1 0 auto;
+        order: 1;
+        text-align: center;
+    }
+
+    .hero-left-kg {
+        order: 2;
+        position: relative;
+        width: 48%;
+        padding-top: 0;
+        margin-top: -30px;
+    }
+
+    .hero-left-kg:before {
+        content: '';
+        position: absolute;
+        width: 80px;
+        height: 80px;
+        background: url("./assets/arrow-right.png") no-repeat center/contain;
+        top: -15px;
+        right: 0;
+    }
+
+    .hero-right-kg {
+        order: 5;
+        position: relative;
+        width: 48%;
+        padding-top: 0;
+        margin-top: -30px;
+    }
+
+    .hero-right-kg:before {
+        content: '';
+        position: absolute;
+        width: 80px;
+        height: 80px;
+        background: url("./assets/arrow-left.png") no-repeat center/contain;
+        top: -15px;
+        left: 0;
+    }
+
+    .hero-arrow-left-kg {
+        display: none;
+    }
+
+    .hero-arrow-right-kg {
+        display: none;
+    }
+    .hero-secondary-kg {
+        background:
+                url("./assets/caramel-quiz.png") no-repeat center top/800px 79%,
+                url("./assets/bg-quiz.png") no-repeat center top/800px 79%,
+                url("./assets/header-blue-bg-mob-ru.png") no-repeat center top/100% 100%;
+        padding: 0;
+        height: 550px;
+        overflow: hidden;
+        position: relative;
+        z-index: 10;
+    }
+    .image-quiz {
+        top: 200px;
+        left: 0;
+        margin: auto;
+    }
+    .heading-secondary-quiz {
+        top: 100%;
+    }
+    .subheading-secondary-quiz {
+        top: 250%;
+        max-width: 100%;
     }
 }

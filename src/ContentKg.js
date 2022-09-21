@@ -6,7 +6,7 @@ import ScrollToButton2 from "./components/ScrollToButton2";
 
 import ArrowBlue from "./assets/arrow-blue.png";
 
-function Content(props) {
+function ContentKg(props) {
   const { t, i18n } = useTranslation();
 
   return (
@@ -16,7 +16,7 @@ function Content(props) {
           <source media="(max-width: 767px)" srcSet={props.pictureUrl}/>
           <img src={props.imageUrl}/>
         </picture>
-        <ScrollToButton2 duration="300" toId="header"><Link to="/first-step">
+        <ScrollToButton2 duration="300" toId="header"><Link to="/kg/quiz">
             <div className="button button-arrow">
               <img className="button-arrow-text" src={t('secondBlock.vote')} alt="" />
               <img className="button-arrow-icon" src={ArrowBlue} alt="" />
@@ -34,4 +34,4 @@ function Content(props) {
   );
 }
 
-export default Content;
+export default ContentKg;
