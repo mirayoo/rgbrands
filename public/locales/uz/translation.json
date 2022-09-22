@@ -78,5 +78,9 @@
     "subtitle": "../../../assets/uz-share-subtitle-uz.png",
     "mobTitle": "../../../assets/uz-share-title-mob-uz.png",
     "mobSubtitle": "../../../assets/uz-share-subtitle-mob-uz.png"
-  }
+  },
+  "thanks": {
+  "uztitle": "../../../assets/uz-link-uz.png",
+  "uztitlemob": "../../../assets/uz-link-mob-uz.png"
+}
 }

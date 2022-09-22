@@ -74,7 +74,8 @@
     "older":  "старше",
     "cities": "../../../uz-cities-ru.json",
     "confirmLabel": "../../../assets/uz-confirm-label-ru.png",
-    "fullName": "Ваша Фамилия и Имя"
+    "fullName": "Ваша Фамилия и Имя",
+    "email": "Ваш E-mail"
   },
   "share": {
     "title": "../../../assets/uz-share-title-ru.png",
@@ -92,5 +93,51 @@
     "subtitle6": "../../../assets/quiz-subtitle-6-ru.png",
     "subtitle7": "../../../assets/quiz-subtitle-7-ru.png",
     "subtitle8": "../../../assets/quiz-subtitle-8-ru.png"
+  },
+  "quizProd": {
+    "title1": "../../../assets/kg-list-title-1-ru.png",
+    "title2": "../../../assets/kg-list-title-2-ru.png",
+    "title3": "../../../assets/kg-list-title-3-ru.png",
+    "title4": "../../../assets/kg-list-title-4-ru.png",
+    "title5": "../../../assets/kg-list-title-5-ru.png",
+    "title6": "../../../assets/kg-list-title-6-ru.png",
+    "title7": "../../../assets/kg-list-title-7-ru.png",
+    "title8": "../../../assets/kg-list-title-8-ru.png",
+    "subtitle1": "../../../assets/kg-list-subtitle-1-ru.png",
+    "subtitle2": "../../../assets/kg-list-subtitle-2-ru.png",
+    "subtitle3": "../../../assets/kg-list-subtitle-3-ru.png",
+    "subtitle4": "../../../assets/kg-list-subtitle-4-ru.png",
+    "subtitle5": "../../../assets/kg-list-subtitle-5-ru.png",
+    "subtitle6": "../../../assets/kg-list-subtitle-6-ru.png",
+    "subtitle7": "../../../assets/kg-list-subtitle-7-ru.png",
+    "subtitle8": "../../../assets/kg-list-subtitle-8-ru.png",
+    "mobtitle1": "../../../assets/kg-list-title-mob-1-ru.png",
+    "mobtitle2": "../../../assets/kg-list-title-mob-2-ru.png",
+    "mobtitle3": "../../../assets/kg-list-title-mob-3-ru.png",
+    "mobtitle4": "../../../assets/kg-list-title-mob-4-ru.png",
+    "mobtitle5": "../../../assets/kg-list-title-mob-5-ru.png",
+    "mobtitle6": "../../../assets/kg-list-title-mob-6-ru.png",
+    "mobtitle7": "../../../assets/kg-list-title-mob-7-ru.png",
+    "mobtitle8": "../../../assets/kg-list-title-mob-8-ru.png",
+    "mobsubtitle1": "../../../assets/kg-list-subtitle-mob-1-ru.png",
+    "mobsubtitle2": "../../../assets/kg-list-subtitle-mob-2-ru.png",
+    "mobsubtitle3": "../../../assets/kg-list-subtitle-mob-3-ru.png",
+    "mobsubtitle4": "../../../assets/kg-list-subtitle-mob-4-ru.png",
+    "mobsubtitle5": "../../../assets/kg-list-subtitle-mob-5-ru.png",
+    "mobsubtitle6": "../../../assets/kg-list-subtitle-mob-6-ru.png",
+    "mobsubtitle7": "../../../assets/kg-list-subtitle-mob-7-ru.png",
+    "mobsubtitle8": "../../../assets/kg-list-subtitle-mob-8-ru.png"
+  },
+  "thanks": {
+    "uztitle": "../../../assets/uz-link-ru.png",
+    "uztitlemob": "../../../assets/uz-link-mob-ru.png",
+    "title": "../../../assets/kg-link-ru.png",
+    "titlemob": "../../../assets/kg-link-mob-ru.png"
+  },
+  "confirm": {
+    "subtitle": "../../../assets/kg-confirm-subtitle-ru.png",
+    "mobSubtitle": "../../../assets/kg-comfirm-subtitle-mob-ru.png",
+    "warning": "../../../assets/kg-warning-ru.png",
+    "email": "../../../assets/kg-email-label-ru.png"
   }
 }
