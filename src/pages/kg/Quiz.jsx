@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import { useNavigate } from "react-router-dom";
 import '../../index.css';
 
 import ListItem from "../../components/ListItem";
@@ -21,12 +22,13 @@ import Food6 from "../../assets/chicken.png";
 import Food7 from "../../assets/pasta.png";
 import Food8 from "../../assets/cesar.png";
 import PhoneCall from "../../assets/phone-call.png";
-import PhoneNumber from "../../assets/1309.png";
+import PhoneNumber from "../../assets/3775.png";
 import SwitcherKg from "../../components/SwitcherKg";
 import RU from "../../assets/ru.png";
 
 function QuizKg(props) {
   const { t, i18n } = useTranslation();
+  const navigate = useNavigate();
 
   const questions = [
     {
@@ -183,8 +185,7 @@ function QuizKg(props) {
     if (nextQuestion < questions.length) {
       setCurrentQuestion(nextQuestion);
     } else {
-      const url= "/kg/form";
-      setTimeout(function(){window.location = url;}, 100);
+      navigate('/kg/form');
     }
   };
 
@@ -193,7 +194,7 @@ function QuizKg(props) {
       <div className="hero-secondary hero-secondary-kg" id="header">
         <div className="wrapper ">
           <div className="header-nav nav-secondary">
-            <a className="button button-secondary button-phone" href="tel:1309"><img className="phone-icon" src={PhoneCall} alt="" /><img className="phone-number" src={PhoneNumber} alt="" /></a>
+            <a className="button button-secondary button-phone" href="tel:3775"><img className="phone-icon" src={PhoneCall} alt="" /><img className="phone-number" src={PhoneNumber} alt="" /></a>
             <img className="heading-secondary heading-secondary-quiz" src={t(`${questions[currentQuestion].heroTitle}`)}/>
             <img className="subheading-secondary subheading-secondary-quiz" src={t(`${questions[currentQuestion].heroSubtitle}`)}/>
             <a className="button" href="#"><img src={t('header.rules')} alt="" /></a>

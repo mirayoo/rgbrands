@@ -18,12 +18,12 @@ function Share(props) {
       <div className="choose-block share-block share-kg" id="content">
         <div className="wrapper">
           <picture className="choose-block-img share-title">
-            <source media="(max-width: 767px)" srcSet={t('share.mobTitle')}/>
-            <img src={t('share.title')}/>
+            <source media="(max-width: 767px)" srcSet={t('kgshare.mobtitle')}/>
+            <img src={t('kgshare.title')}/>
           </picture>
           <picture className="choose-block-img share-subtitle">
-            <source media="(max-width: 767px)" srcSet={t('share.mobSubtitle')}/>
-            <img src={t('share.subtitle')}/>
+            <source media="(max-width: 767px)" srcSet={t('kgshare.mobsubtitle')}/>
+            <img src={t('kgshare.subtitle')}/>
           </picture>
           <div className="socials">
             <a className="social-link whatsapp-link" href="#">

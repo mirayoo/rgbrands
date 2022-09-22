@@ -135,5 +135,11 @@
     "mobSubtitle": "../../../assets/kg-comfirm-subtitle-mob-kg.png",
     "warning": "../../../assets/kg-warning-kg.png",
     "email": "../../../assets/kg-email-label-kg.png"
+  },
+  "kgshare": {
+    "title": "../../../assets/kg-share-title-kg.png",
+    "subtitle": "../../../assets/kg-share-subtitle-kg.png",
+    "mobtitle": "../../../assets/kg-share-title-mob-kg.png",
+    "mobsubtitle": "../../../assets/kg-share-subtitle-mob-kg.png"
   }
 }

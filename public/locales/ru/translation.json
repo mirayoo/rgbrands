@@ -9,6 +9,7 @@
     "secondTitle": "../../../assets/uz-second-step-heading-ru.png",
     "thirdTitle": "../../../assets/uz-third-step-heading-ru.png",
     "formTitle": "../../../assets/uz-form-title-ru.png",
+    "formTitleMob": "../../../assets/uz-form-title-ru.png",
     "firstSubtitle": "../../../assets/uz-first-step-subheading-ru.png",
     "formSubtitle": "../../../assets/uz-form-subtitle-ru.png",
     "formSubtitleMob": "../../../assets/uz-form-subtitle-mob-ru.png",
@@ -139,5 +140,21 @@
     "mobSubtitle": "../../../assets/kg-comfirm-subtitle-mob-ru.png",
     "warning": "../../../assets/kg-warning-ru.png",
     "email": "../../../assets/kg-email-label-ru.png"
+  },
+  "kgshare": {
+    "title": "../../../assets/kg-share-title-ru.png",
+    "subtitle": "../../../assets/kg-share-subtitle-ru.png",
+    "mobtitle": "../../../assets/kg-share-title-mob-ru.png",
+    "mobsubtitle": "../../../assets/kg-share-subtitle-mob-ru.png"
+  },
+  "combo": {
+    "subtitle": "../../../assets/combo-subtitle-ru.png",
+    "mobsubtitle": "../../../assets/combo-subtitle-mob-ru.png",
+    "iin": "../../../assets/iin-ru.png",
+    "iinInfo": "ИИН",
+    "emailInfo": "E-mail",
+    "iinConfirm": "../../../assets/iin-confirm-ru.png",
+    "email": "../../../assets/email-send-ru.png",
+    "aware": "../../../assets/aware-ru.png"
   }
 }

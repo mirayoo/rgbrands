@@ -7,7 +7,7 @@ import '../../index.css';
 
 import Heading from '../../assets/uz-confirm-title-ru.png';
 import PhoneCall from "../../assets/phone-call.png";
-import PhoneNumber from "../../assets/1309.png";
+import PhoneNumber from "../../assets/3775.png";
 import Rules from "../../assets/rules.png";
 import SwitcherKg from "../../components/SwitcherKg";
 import RU from "../../assets/ru.png";
@@ -32,10 +32,10 @@ function Confirm(props) {
   };
 
   return (
-    <div className="hero-secondary hero-form-bg">
+    <div className="hero-secondary hero-form-bg hero-form-kz">
       <div className="wrapper ">
         <div className="header-nav nav-secondary">
-          <a className="button button-secondary button-phone" href="tel:1309"><img className="phone-icon" src={PhoneCall} alt="" /><img className="phone-number" src={PhoneNumber} alt="" /></a>
+          <a className="button button-secondary button-phone" href="tel:3775"><img className="phone-icon" src={PhoneCall} alt="" /><img className="phone-number" src={PhoneNumber} alt="" /></a>
           <a className="button" href="#"><img src={t('header.rules')} alt="" /></a>
           <SwitcherKg imageUrl={RU}/>
         </div>

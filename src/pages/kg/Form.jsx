@@ -8,7 +8,7 @@ import ImageUrl from '../../assets/thumbs-up.png';
 function Auth(props) {
   return (
     <div>
-      <FormBlockKg imageUrl={ImageUrl} heroBg="hero-secondary hero-form-bg hero-form-kz"/>
+      <FormBlockKg imageUrl={ImageUrl} heroBg="hero-secondary hero-form-kz"/>
     </div>
   )
 }

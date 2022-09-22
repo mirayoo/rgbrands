@@ -5,7 +5,7 @@ import './index.css';
 import SwitcherKz from './components/SwitcherKz';
 
 import PhoneCall from './assets/phone-call.png';
-import PhoneNumber from './assets/1309.png';
+import PhoneNumber from './assets/3775.png';
 import RU from './assets/ru.png';
 import Bottles from './assets/bottles-2.png';
 import BottlesMob from './assets/bottles-mob-2.png';
@@ -23,7 +23,7 @@ function HeroKz(props) {
     <div className="hero-primary hero-kg" id="header">
       <div className="wrapper ">
         <div className="header-nav">
-          <a className="button button-phone" href="tel:1309"><img className="phone-icon" src={PhoneCall} alt="" /><img className="phone-number" src={PhoneNumber} alt="" /></a>
+          <a className="button button-phone" href="tel:3775"><img className="phone-icon" src={PhoneCall} alt="" /><img className="phone-number" src={PhoneNumber} alt="" /></a>
           <picture className="heading" >
             <source media="(max-width: 767px)" srcSet={t('header.mobTitle')}/>
             <img src={t('header.title')}/>

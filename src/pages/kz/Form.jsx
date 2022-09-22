@@ -1,10 +1,16 @@
-import React,{ useState, useEffect } from "react";
+import React from "react";
 import '../../index.css';
 
-function Main() {
-  return(
-    <div>Hi</div>
-  );
+import FormBlockKz from '../../FormBlockKz';
+
+import ImageUrl from '../../assets/thumbs-up.png';
+
+function Auth(props) {
+  return (
+    <div>
+      <FormBlockKz imageUrl={ImageUrl} heroBg="hero-secondary hero-form-kz"/>
+    </div>
+  )
 }
 
-export default Main;
+export default Auth;

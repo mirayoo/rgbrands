@@ -43,7 +43,7 @@ useEffect(() => {
               <img className="thanks-comma thanks-comma-4" src={Comma4} alt="" />
               <img className="thanks-comma thanks-comma-5" src={Comma5} alt="" />
             </div>
-            <a className="button" href="#"><img src={Rules} alt="" /></a>
+            <a className="button" href="#"><img src={t('header.rules')} alt="" /></a>
             <Switcher imageUrl={RU}/>
           </div>
 

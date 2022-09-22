@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import '../../index.css';
 
 import PhoneCall from "../../assets/phone-call.png";
-import PhoneNumber from "../../assets/1309.png";
+import PhoneNumber from "../../assets/3775.png";
 import Rules from "../../assets/rules.png";
 import SwitcherKg from "../../components/SwitcherKg";
 import RU from "../../assets/ru.png";
@@ -33,7 +33,7 @@ function Thanks() {
       <div className="hero-secondary hero-thanks-kz">
         <div className="wrapper ">
           <div className="header-nav nav-secondary">
-            <a className="button button-phone" href="tel:1309"><img className="phone-icon" src={PhoneCall} alt="" /><img className="phone-number" src={PhoneNumber} alt="" /></a>
+            <a className="button button-phone" href="tel:3775"><img className="phone-icon" src={PhoneCall} alt="" /><img className="phone-number" src={PhoneNumber} alt="" /></a>
             <div className="heading thanks-heading">
               <img src={t('hero.thanks')}/>
               <img className="thanks-comma thanks-comma-1" src={Comma1} alt="" />
@@ -42,7 +42,7 @@ function Thanks() {
               <img className="thanks-comma thanks-comma-4" src={Comma4} alt="" />
               <img className="thanks-comma thanks-comma-5" src={Comma5} alt="" />
             </div>
-            <a className="button" href="#"><img src={Rules} alt="" /></a>
+            <a className="button" href="#"><img src={t('header.rules')} alt="" /></a>
             <SwitcherKg imageUrl={RU}/>
           </div>
 

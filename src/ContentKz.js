@@ -16,7 +16,7 @@ function ContentKz(props) {
           <source media="(max-width: 767px)" srcSet={props.pictureUrl}/>
           <img src={props.imageUrl}/>
         </picture>
-        <ScrollToButton2 duration="300" toId="header"><Link to="/kz/first-step">
+        <ScrollToButton2 duration="300" toId="header"><Link to="/kz/quiz">
             <div className="button button-arrow">
               <img className="button-arrow-text" src={t('secondBlock.vote')} alt="" />
               <img className="button-arrow-icon" src={ArrowBlue} alt="" />

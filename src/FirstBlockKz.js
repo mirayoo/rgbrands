@@ -1,0 +1,29 @@
+import React from "react";
+import './index.css';
+
+import SwitcherKz from './components/SwitcherKz';
+
+import PhoneCall from './assets/phone-call.png';
+import PhoneNumber from './assets/3775.png';
+import RU from './assets/ru.png';
+import { useTranslation } from "react-i18next";
+
+function FirstBlockKz(props) {
+  const { t, i18n } = useTranslation();
+
+  return (
+    <div className="hero-secondary" id="header">
+      <div className="wrapper ">
+        <div className="header-nav nav-secondary">
+          <a className="button button-secondary button-phone" href="tel:3775"><img className="phone-icon" src={PhoneCall} alt="" /><img className="phone-number" src={PhoneNumber} alt="" /></a>
+          <img className="heading-secondary" src={props.headingUrl}/>
+          <img className="subheading-secondary" src={props.subheadingUrl}/>
+          <a className="button" href="#"><img src={t('header.rules')} alt="" /></a>
+          <SwitcherKz imageUrl={RU}/>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default FirstBlockKz;

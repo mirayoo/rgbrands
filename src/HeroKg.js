@@ -5,7 +5,7 @@ import './index.css';
 import SwitcherKg from './components/SwitcherKg';
 
 import PhoneCall from './assets/phone-call.png';
-import PhoneNumber from './assets/1309.png';
+import PhoneNumber from './assets/3775.png';
 import RU from './assets/ru.png';
 import Bottles from './assets/bottles-2.png';
 import BottlesMob from './assets/bottles-mob-2.png';
@@ -23,7 +23,7 @@ function HeroKg(props) {
     <div className="hero-primary hero-kg" id="header">
       <div className="wrapper ">
         <div className="header-nav">
-          <a className="button button-phone" href="tel:1309"><img className="phone-icon" src={PhoneCall} alt="" /><img className="phone-number" src={PhoneNumber} alt="" /></a>
+          <a className="button button-phone" href="tel:3775"><img className="phone-icon" src={PhoneCall} alt="" /><img className="phone-number" src={PhoneNumber} alt="" /></a>
           <img className="heading" src={props.imageUrl}/>
           <a className="button"><img src={t('header.rules')} alt="" /></a>
           <SwitcherKg imageUrl={RU}/>
