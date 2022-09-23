@@ -52,15 +52,15 @@ function Confirm(props) {
           <div className="form-section-right">
             <div>
               <img className="form-title" src={t('combo.iin')} alt="" />
-              <form className="form"  onSubmit={handleSubmit}>
+              <form className="form">
 
                 <div className="confirm-input name-email combo-input">
-                  <input className="redinput" type="text" placeholder={t('combo.iinInfo')} {...register("fullName")} />
-                  <button className="redbutton" type="submit"><img src={t('combo.iinConfirm')} alt="" /></button>
+                  <input className="redinput" type="text" placeholder={t('combo.iinInfo')} {...register("IIN")} />
+                  <button className="redbutton"><img src={t('combo.iinConfirm')} alt="" /></button>
                 </div>
                 <div className="confirm-input name-email combo-input">
-                  <input className="redinput" type="text" placeholder={t('combo.emailInfo')} {...register("fullName")} />
-                  <button className="redbutton" type="submit"><img src={t('combo.email')} alt="" /></button>
+                  <input className="redinput" type="email" placeholder={t('combo.emailInfo')} {...register("email")} />
+                  <button className="redbutton"><img src={t('combo.email')} alt="" /></button>
                 </div>
 
                 <img className="confirm-warning combo-warning" src={t('combo.aware')} alt="" />

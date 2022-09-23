@@ -13,10 +13,11 @@ import PhoneCall from './assets/phone-call.png';
 import PhoneNumber from './assets/3775.png';
 import RU from './assets/ru.png';
 import ArrowBlue from "./assets/arrow-blue.png";
+import { IMaskInput } from "react-imask";
 
 function FormBlockKz(props) {
   const { t, i18n } = useTranslation();
-
+  const PhoneMask = "+000000000000";
   const {register, formState:{errors},setError,clearErrors} = useForm();
   const onSubmit = (data)=> {
 
@@ -86,7 +87,14 @@ function FormBlockKz(props) {
                 </div>
                 <div className="form-phone">
                   <img className="input-label" src={t('form.number')} alt="" />
-                  <input {...register("phone")} type="tel" placeholder="+7" />
+                  <IMaskInput
+                    {...register('phone') }
+                    className="form-control"
+                    mask={PhoneMask}
+                    type="tel"
+                    onAccept={(value, mask) => console.log(value, mask)}
+                    placeholder="+7"
+                  />
                 </div>
 
                 <div className="form-items-left">

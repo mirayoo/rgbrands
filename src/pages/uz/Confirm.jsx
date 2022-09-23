@@ -52,7 +52,7 @@ function Confirm(props) {
           <div className="form-section-right">
             <div>
               <img className="form-title" src={t('hero.confirmTitle')} alt="" />
-              <form className="form"  onSubmit={handleSubmit}>
+              <form className="form">
 
                 <div className="confirm-input name-email">
                   <input type="text" placeholder={t('form.fullName')} {...register("fullName")} />

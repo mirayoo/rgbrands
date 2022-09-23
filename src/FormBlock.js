@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import {useNavigate} from 'react-router-dom';
 import { useForm } from "react-hook-form";
+import { IMaskInput } from "react-imask";
 import cities from './ru-cities-uz.json';
 import citiesUz from './uz-cities-uz.json';
 import OTPInput, { ResendOTP } from "otp-input-react";
@@ -16,7 +17,7 @@ import ArrowBlue from "./assets/arrow-blue.png";
 
 function FormBlock(props) {
   const { t, i18n } = useTranslation();
-
+  const PhoneMask = "+000000000000";
   const {register, formState:{errors},setError,clearErrors} = useForm();
   const onSubmit = (data)=> {
 
@@ -83,7 +84,15 @@ function FormBlock(props) {
                 </div>
                 <div className="form-phone">
                   <img className="input-label" src={t('form.number')} alt="" />
-                  <input {...register("phone")} type="tel" placeholder="+998" />
+
+                  <IMaskInput
+                    {...register('phone') }
+                    className="form-control"
+                    mask={PhoneMask}
+                    type="tel"
+                    onAccept={(value, mask) => console.log(value, mask)}
+                    placeholder="+998"
+                  />
                 </div>
 
                 <div className="form-items-left">
