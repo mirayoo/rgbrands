@@ -2,18 +2,17 @@ import React, { useEffect, useState } from "react";
 import {useNavigate} from 'react-router-dom';
 import { useForm } from "react-hook-form";
 import { IMaskInput } from "react-imask";
-import cities from './ru-cities-uz.json';
-import citiesUz from './uz-cities-uz.json';
 import OTPInput, { ResendOTP } from "otp-input-react";
 import { useTranslation } from "react-i18next";
 import './index.css';
-
 import Switcher from './components/Switcher';
 
 import PhoneCall from './assets/phone-call.png';
 import PhoneNumber from './assets/1309.png';
 import RU from './assets/ru.png';
 import ArrowBlue from "./assets/arrow-blue.png";
+
+const axios = require('axios').default;
 
 function FormBlock(props) {
   const { t, i18n } = useTranslation();
@@ -24,34 +23,61 @@ function FormBlock(props) {
   };
   const [OTP, setOTP] = useState("");
   const navigate = useNavigate();
+  const [cities,setCities]= useState([])
+  const [city,setCity ]=useState()
+  const [isCodeSented,setCodeSented]=useState(false)
+  const [code,setCode]=useState("")
+  const [phoneNumber,setPhoneNumber]=useState("")
+  function signUp(){
+    axios.post("https://staging-gateway.vpluse.me/v2/client/action/vkusnee/phone-sign-up",{phone:phoneNumber,cityId:10100,countryId:3})
+      .then(function(response){
+        if(response.status===204){
+          setCodeSented(true)
+        }
+      })
+  }
+  function confirmation(){
+    axios.post("https://staging-gateway.vpluse.me/v2/client/action/vkusnee/phone-sign-up-confirm",{phone:phoneNumber,code:OTP})
+      .then(function(response){
+        if(response.status===204){
+          setCodeSented(true);
+          navigate('../thanks');
+        }
+      })
+  }
+  useEffect(()=>{
 
-  const handleSubmit = event => {
-    event.preventDefault();
-    navigate('../thanks');
-  };
-
-
+    axios.get("https://staging-gateway.vpluse.me/v2/vkusnee/cities/3")
+      .then(function(response){
+        setCities(response.data.data.items)
+      })
+  },[])
   function OptionsRender() {
     if (i18n.language == 'ru') {
-    return (
-      <>
-        {cities.map((city, index) => (
-          <>
-            <option key={index.toString()}>{city.name}</option>
-          </>
-        ))}
-      </>
-    )} else if (i18n.language == "uz") {
       return (
         <>
-          {citiesUz.map((city, index) => (
+          {cities.map((city) => (
             <>
-              <option key={index.toString()}>{city.name}</option>
+              <option onClick={()=>setCity(city.id)} key={city.id}>{city.name_ru}</option>
+            </>
+          ))}
+        </>
+      )} else if (i18n.language == "uz") {
+      return (
+        <>
+          {cities.map((city) => (
+            <>
+              <option onClick={()=>setCity(city.id)} key={city.id}>{city.name_ua}</option>
             </>
           ))}
         </>
       )}
   }
+
+ // const handleSubmit = event => {
+ //   event.preventDefault();
+ //   navigate('../thanks');
+ // };
 
   return (
     <div className={props.heroBg}>
@@ -74,7 +100,7 @@ function FormBlock(props) {
           <div className="form-section-right">
             <div>
               <img className="form-title" src={t('form.formTitle')} alt="" />
-              <form className="form"  onSubmit={handleSubmit}>
+              <div className="form">
 
                 <div className="form-city">
                   <img className="input-label" src={t('form.city')} alt="" />
@@ -90,7 +116,7 @@ function FormBlock(props) {
                     className="form-control"
                     mask={PhoneMask}
                     type="tel"
-                    onAccept={(value, mask) => console.log(value, mask)}
+                    value={phoneNumber} onChange={(e)=>setPhoneNumber(e.target.value)}
                     placeholder="+998"
                   />
                 </div>
@@ -114,20 +140,21 @@ function FormBlock(props) {
                     </select>
                   </div>
                 </div>
-
-                <div className="phone-confirm">
-                  <picture>
-                    <source media="(max-width:767px)" srcSet={t('form.phoneConfirmMob')}/>
-                    <img className="phone-confirm-text" src={t('form.phoneConfirm')} alt="" />
-                  </picture>
-                  <button className="phone-confirm-button button button-red"><img src={t('form.formConfirm')} alt=""/></button>
-                </div>
-
+                {!isCodeSented &&
+                  <div className="phone-confirm">
+                    <picture>
+                      <source media="(max-width:767px)" srcSet={t('form.phoneConfirmMob')} />
+                      <img className="phone-confirm-text" src={t('form.phoneConfirm')} alt="" />
+                    </picture>
+                    <button onClick={() => signUp()} className="phone-confirm-button button button-red"><img
+                      src={t('form.formConfirm')} alt="" /></button>
+                  </div>
+                }
                 <div className="confirm-code">
                   <img className="confirm-code-text" src={t('form.otpForm')} alt="" />
                   <>
                     <OTPInput value={OTP} onChange={setOTP} OTPLength={4} otpType="number" disabled={false}/>
-                    {/* <ResendOTP onResendClick={() => console.log("Resend clicked")} /> */}
+                    {/*<ResendOTP onResendClick={() => console.log("Resend clicked")} /> */}
                   </>
                 </div>
 
@@ -145,11 +172,11 @@ function FormBlock(props) {
                   </div>
                 </div>
 
-                <button className="button form-button button-arrow" type="submit">
+                <button className="button form-button button-arrow"  onClick={()=>confirmation()}>
                   <img className="button-arrow-text" src={t('form.approve')} alt="" />
                   <img className="button-arrow-icon" src={ArrowBlue} alt="" />
                 </button>
-              </form>
+              </div>
             </div>
           </div>
         </div>
