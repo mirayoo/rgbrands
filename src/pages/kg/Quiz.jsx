@@ -25,10 +25,22 @@ import PhoneCall from "../../assets/phone-call.png";
 import PhoneNumber from "../../assets/3775.png";
 import SwitcherKg from "../../components/SwitcherKg";
 import RU from "../../assets/ru.png";
+import { default as axios } from "axios";
 
 function QuizKg(props) {
   const { t, i18n } = useTranslation();
   const navigate = useNavigate();
+  function getRules() {
+    axios.get("https://staging-gateway.vpluse.me/v2/smallpromo/terms/2")
+      .then(function(response) {
+        if (i18n.language == 'ru') {
+          window.open(response.data.data[0].file.ru, '_blank');
+
+        } else if (i18n.language == 'kg') {
+          window.open(response.data.data[0].file.kg, '_blank');
+        }
+      });
+  }
 
   const questions = [
     {
@@ -197,7 +209,7 @@ function QuizKg(props) {
             <a className="button button-secondary button-phone" href="tel:3775"><img className="phone-icon" src={PhoneCall} alt="" /><img className="phone-number" src={PhoneNumber} alt="" /></a>
             <img className="heading-secondary heading-secondary-quiz" src={t(`${questions[currentQuestion].heroTitle}`)}/>
             <img className="subheading-secondary subheading-secondary-quiz" src={t(`${questions[currentQuestion].heroSubtitle}`)}/>
-            <a className="button" href="#"><img src={t('header.rules')} alt="" /></a>
+            <button onClick={() => getRules()} className="button"><img src={t('header.rules')} alt="" /></button>
             <SwitcherKg imageUrl={RU}/>
           </div>
           <img className="image-quiz" src={questions[currentQuestion].heroImage} alt="" />

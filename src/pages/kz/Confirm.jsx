@@ -17,26 +17,30 @@ import FormTitle from "../../assets/uz-confirm-heading-ru.png";
 import ArrowBlue from "../../assets/arrow-blue.png";
 import ImageUrl from '../../assets/clap.png';
 import Label from '../../assets/uz-confirm-label-ru.png';
+import { default as axios } from "axios";
 
 function Confirm(props) {
   const { t, i18n } = useTranslation();
   const {register, formState:{errors},setError,clearErrors} = useForm();
-  const onSubmit = (data)=> {
+  function getRules() {
+    axios.get("https://staging-gateway.vpluse.me/v2/smallpromo/terms/1")
+      .then(function(response) {
+        if (i18n.language == 'ru') {
+          window.open(response.data.data[0].file.ru, '_blank');
 
-  };
+        } else if (i18n.language == 'kz') {
+          window.open(response.data.data[0].file.kz, '_blank');
+        }
+      });
+  }
   const navigate = useNavigate();
-
-  const handleSubmit = event => {
-    event.preventDefault();
-    navigate('../kz/share');
-  };
 
   return (
     <div className="hero-secondary hero-form-bg hero-form-kz">
       <div className="wrapper ">
         <div className="header-nav nav-secondary">
           <a className="button button-secondary button-phone" href="tel:3775"><img className="phone-icon" src={PhoneCall} alt="" /><img className="phone-number" src={PhoneNumber} alt="" /></a>
-          <a className="button" href="#"><img src={t('header.rules')} alt="" /></a>
+          <button onClick={() => getRules()} className="button"><img src={t('header.rules')} alt="" /></button>
           <SwitcherKz imageUrl={RU}/>
         </div>
         <div className="form-hero">
@@ -52,7 +56,7 @@ function Confirm(props) {
           <div className="form-section-right">
             <div>
               <img className="form-title" src={t('combo.iin')} alt="" />
-              <form className="form">
+              <div className="form">
 
                 <div className="confirm-input name-email combo-input">
                   <input className="redinput" type="text" placeholder={t('combo.iinInfo')} {...register("IIN")} />
@@ -75,7 +79,7 @@ function Confirm(props) {
                   <span className="button-bg-comma confirm-comma-5 button-bg-comma-5"></span>
                   <span className="button-bg-comma confirm-comma-6 button-bg-comma-6"></span>
                 </button>
-              </form>
+              </div>
             </div>
           </div>
         </div>

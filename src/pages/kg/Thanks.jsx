@@ -16,17 +16,24 @@ import Comma3 from "../../assets/light-comma-3.png";
 import Comma4 from "../../assets/light-comma-4.png";
 import Comma5 from "../../assets/light-comma-5.png";
 import { useTranslation } from "react-i18next";
+import { default as axios } from "axios";
 
 function Thanks() {
   const { t, i18n } = useTranslation();
 
   let navigate = useNavigate();
 
- useEffect(() => {
-    setTimeout(() => {
-      navigate('../kg/confirm')
-    }, 5000)
-  }, [])
+  function getRules() {
+    axios.get("https://staging-gateway.vpluse.me/v2/smallpromo/terms/2")
+      .then(function(response) {
+        if (i18n.language == 'ru') {
+          window.open(response.data.data[0].file.ru, '_blank');
+
+        } else if (i18n.language == 'kg') {
+          window.open(response.data.data[0].file.kg, '_blank');
+        }
+      });
+  }
 
   return (
     <>
@@ -42,7 +49,7 @@ function Thanks() {
               <img className="thanks-comma thanks-comma-4" src={Comma4} alt="" />
               <img className="thanks-comma thanks-comma-5" src={Comma5} alt="" />
             </div>
-            <a className="button" href="#"><img src={t('header.rules')} alt="" /></a>
+            <button onClick={() => getRules()} className="button"><img src={t('header.rules')} alt="" /></button>
             <SwitcherKg imageUrl={RU}/>
           </div>
 

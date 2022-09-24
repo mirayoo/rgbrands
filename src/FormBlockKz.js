@@ -18,9 +18,17 @@ function FormBlockKz(props) {
   const { t, i18n } = useTranslation();
   const PhoneMask = "+000000000000";
   const {register, formState:{errors},setError,clearErrors} = useForm();
-  const onSubmit = (data)=> {
+  function getRules() {
+    axios.get("https://staging-gateway.vpluse.me/v2/smallpromo/terms/1")
+      .then(function(response) {
+        if (i18n.language == 'ru') {
+          window.open(response.data.data[0].file.ru, '_blank');
 
-  };
+        } else if (i18n.language == 'kz') {
+          window.open(response.data.data[0].file.kz, '_blank');
+        }
+      });
+  }
   const [OTP, setOTP] = useState("");
   const navigate = useNavigate();
   const [cities,setCities]= useState([])
@@ -29,7 +37,7 @@ function FormBlockKz(props) {
   const [code,setCode]=useState("")
   const [phoneNumber,setPhoneNumber]=useState("")
   function signUp(){
-    axios.post("https://staging-gateway.vpluse.me/v2/client/action/vkusnee/phone-sign-up",{phone:phoneNumber,cityId:1114,countryId:1})
+    axios.post("https://staging-gateway.vpluse.me/v2/client/action/vkusnee/phone-sign-up",{phone:phoneNumber,cityId:1000,countryId:1})
       .then(function(response){
         if(response.status===204){
           setCodeSented(true)
@@ -41,7 +49,6 @@ function FormBlockKz(props) {
       .then(function(response){
         if(response.status===204){
           setCodeSented(true);
-          navigate('../thanks');
         }
       })
   }
@@ -84,7 +91,7 @@ function FormBlockKz(props) {
       <div className="wrapper ">
         <div className="header-nav nav-secondary">
           <a className="button button-secondary button-phone" href="tel:1309"><img className="phone-icon" src={PhoneCall} alt="" /><img className="phone-number" src={PhoneNumber} alt="" /></a>
-          <a className="button" href="#"><img src={t('header.rules')} alt="" /></a>
+          <button onClick={() => getRules()} className="button"><img src={t('header.rules')} alt="" /></button>
           <SwitcherKz imageUrl={RU}/>
         </div>
         <div className="form-hero">
@@ -160,13 +167,13 @@ function FormBlockKz(props) {
 
                 <div className="checkboxes-container">
                   <div className="form-checkbox">
-                    <input className="checkbox visually-hidden" type="checkbox"/>
+                    <input className="checkbox visually-hidden" type="checkbox" required/>
                     <span className="checkbox-fake"></span>
                     <img className="checkbox-text" src={t('form.firstCheck')} alt=""/>
                   </div>
 
                   <div className="form-checkbox">
-                    <input className="checkbox visually-hidden" type="checkbox"/>
+                    <input className="checkbox visually-hidden" type="checkbox" required/>
                     <span className="checkbox-fake"></span>
                     <img className="checkbox-text" src={t('form.secondCheck')} alt=""/>
                   </div>

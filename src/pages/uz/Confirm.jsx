@@ -4,39 +4,45 @@ import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import '../../index.css';
 
-
-import Heading from '../../assets/uz-confirm-title-ru.png';
 import PhoneCall from "../../assets/phone-call.png";
 import PhoneNumber from "../../assets/1309.png";
-import Rules from "../../assets/rules.png";
 import Switcher from "../../components/Switcher";
 import RU from "../../assets/ru.png";
-import SubHeadingMob from "../../assets/uz-confirm-subtitle-mob-ru.png";
-import SubHeading from "../../assets/uz-confirm-subtitle-ru.png";
-import FormTitle from "../../assets/uz-confirm-heading-ru.png";
 import ArrowBlue from "../../assets/arrow-blue.png";
 import ImageUrl from '../../assets/clap.png';
-import Label from '../../assets/uz-confirm-label-ru.png';
+import { default as axios } from "axios";
 
 function Confirm(props) {
   const { t, i18n } = useTranslation();
   const {register, formState:{errors},setError,clearErrors} = useForm();
-  const onSubmit = (data)=> {
+  function getRules() {
+    axios.get("https://staging-gateway.vpluse.me/v2/smallpromo/terms/3")
+      .then(function(response) {
+        if (i18n.language == 'ru') {
+          window.open(response.data.data[0].file.ru, '_blank');
 
-  };
+        } else if (i18n.language == 'uz') {
+          window.open(response.data.data[0].file.uz, '_blank');
+        }
+      });
+  }
   const navigate = useNavigate();
-
-  const handleSubmit = event => {
-    event.preventDefault();
-    navigate('../share');
-  };
+  const [name,setNme]=useState("")
+  function signUp(){
+    axios.post("https://staging-gateway.vpluse.me/v2/client/action/vkusnee/phone-sign-up",{first_name:name,countryId:1})
+      .then(function(response){
+        if(response.status===204){
+          setCodeSented(true)
+        }
+      })
+  }
 
   return (
     <div className="hero-secondary hero-form-bg">
       <div className="wrapper ">
         <div className="header-nav nav-secondary">
           <a className="button button-secondary button-phone" href="tel:1309"><img className="phone-icon" src={PhoneCall} alt="" /><img className="phone-number" src={PhoneNumber} alt="" /></a>
-          <a className="button" href="#"><img src={t('header.rules')} alt="" /></a>
+          <button onClick={() => getRules()} className="button"><img src={t('header.rules')} alt="" /></button>
           <Switcher imageUrl={RU}/>
         </div>
         <div className="form-hero">
@@ -52,7 +58,7 @@ function Confirm(props) {
           <div className="form-section-right">
             <div>
               <img className="form-title" src={t('hero.confirmTitle')} alt="" />
-              <form className="form">
+              <div className="form">
 
                 <div className="confirm-input name-email">
                   <input type="text" placeholder={t('form.fullName')} {...register("fullName")} />
@@ -69,7 +75,7 @@ function Confirm(props) {
                   <span className="button-bg-comma confirm-comma-5 button-bg-comma-5"></span>
                   <span className="button-bg-comma confirm-comma-6 button-bg-comma-6"></span>
                 </button>
-              </form>
+              </div>
             </div>
           </div>
         </div>

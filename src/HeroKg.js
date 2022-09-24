@@ -15,9 +15,22 @@ import PlovMob from './assets/plov.png';
 import BurgerMob from './assets/burger.png';
 import ArrowLeft from './assets/arrow-left.png';
 import ArrowRight from './assets/arrow-right.png';
+import { default as axios } from "axios";
 
 function HeroKg(props) {
   const { t, i18n } = useTranslation();
+
+  function getRules() {
+    axios.get("https://staging-gateway.vpluse.me/v2/smallpromo/terms/2")
+      .then(function(response) {
+        if (i18n.language == 'ru') {
+          window.open(response.data.data[0].file.ru, '_blank');
+
+        } else if (i18n.language == 'kg') {
+          window.open(response.data.data[0].file.kg, '_blank');
+        }
+      });
+  }
 
   return (
     <div className="hero-primary hero-kg" id="header">
@@ -25,7 +38,7 @@ function HeroKg(props) {
         <div className="header-nav">
           <a className="button button-phone" href="tel:3775"><img className="phone-icon" src={PhoneCall} alt="" /><img className="phone-number" src={PhoneNumber} alt="" /></a>
           <img className="heading" src={props.imageUrl}/>
-          <a className="button"><img src={t('header.rules')} alt="" /></a>
+          <button onClick={() => getRules()} className="button"><img src={t('header.rules')} alt="" /></button>
           <SwitcherKg imageUrl={RU}/>
         </div>
 

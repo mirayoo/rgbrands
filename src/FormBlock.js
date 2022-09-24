@@ -18,9 +18,17 @@ function FormBlock(props) {
   const { t, i18n } = useTranslation();
   const PhoneMask = "+000000000000";
   const {register, formState:{errors},setError,clearErrors} = useForm();
-  const onSubmit = (data)=> {
+  function getRules() {
+    axios.get("https://staging-gateway.vpluse.me/v2/smallpromo/terms/3")
+      .then(function(response) {
+        if (i18n.language == 'ru') {
+          window.open(response.data.data[0].file.ru, '_blank');
 
-  };
+        } else if (i18n.language == 'uz') {
+          window.open(response.data.data[0].file.uz, '_blank');
+        }
+      });
+  }
   const [OTP, setOTP] = useState("");
   const navigate = useNavigate();
   const [cities,setCities]= useState([])
@@ -41,7 +49,6 @@ function FormBlock(props) {
       .then(function(response){
         if(response.status===204){
           setCodeSented(true);
-          navigate('../thanks');
         }
       })
   }
@@ -84,7 +91,7 @@ function FormBlock(props) {
       <div className="wrapper ">
         <div className="header-nav nav-secondary">
           <a className="button button-secondary button-phone" href="tel:1309"><img className="phone-icon" src={PhoneCall} alt="" /><img className="phone-number" src={PhoneNumber} alt="" /></a>
-          <a className="button" href="#"><img src={t('header.rules')} alt="" /></a>
+          <button onClick={() => getRules()} className="button"><img src={t('header.rules')} alt="" /></button>
           <Switcher imageUrl={RU}/>
         </div>
         <div className="form-hero">
@@ -160,13 +167,13 @@ function FormBlock(props) {
 
                 <div className="checkboxes-container">
                   <div className="form-checkbox">
-                    <input className="checkbox visually-hidden" type="checkbox"/>
+                    <input className="checkbox visually-hidden" type="checkbox" required/>
                     <span className="checkbox-fake"></span>
                     <img className="checkbox-text" src={t('form.firstCheck')} alt=""/>
                   </div>
 
                   <div className="form-checkbox">
-                    <input className="checkbox visually-hidden" type="checkbox"/>
+                    <input className="checkbox visually-hidden" type="checkbox" required/>
                     <span className="checkbox-fake"></span>
                     <img className="checkbox-text" src={t('form.secondCheck')} alt=""/>
                   </div>
