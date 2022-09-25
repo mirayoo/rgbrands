@@ -1,0 +1,86 @@
+{
+  "header": {
+    "title": "../../assets/uz-heading-uz.png",
+    "rules": "../../assets/rules-uz.png"
+  },
+  "hero": {
+    "firstTitle": "../../assets/uz-first-step-heading-uz.png",
+    "secondTitle": "../../assets/uz-second-step-heading-uz.png",
+    "thirdTitle": "../../assets/uz-third-step-heading-uz.png",
+    "formTitle": "../../assets/uz-form-title-uz.png",
+    "firstSubtitle": "../../assets/uz-first-step-subheading-uz.png",
+    "formSubtitle": "../../assets/uz-form-subtitle-uz.png",
+    "formSubtitleMob": "../../assets/uz-form-subtitle-mob-uz.png",
+    "thanks": "../../assets/uz-thanks-uz.png",
+    "confirmTitle": "../../assets/uz-confirm-heading-uz.png",
+    "confirmHeading": "../../assets/uz-confirm-title-uz.png",
+    "confirmSubheading": "../../assets/uz-confirm-subtitle-uz.png",
+    "confirmSubheadingMob": "../../assets/uz-confirm-subtitle-mob-uz.png"
+  },
+  "secondBlock": {
+    "textBlock": "../../assets/uz-blue-text-block-uz.png",
+    "textBlockMob": "../../assets/uz-blue-text-block-mob-uz.png",
+    "vote": "../../assets/vote-uz.png",
+    "heading1": "../../assets/uz-list-title-1-uz.png",
+    "heading2": "../../assets/uz-list-title-2-uz.png",
+    "heading3": "../../assets/uz-list-title-3-uz.png",
+    "heading4": "../../assets/uz-list-title-4-uz.png",
+    "heading5": "../../assets/uz-list-title-5-uz.png",
+    "heading6": "../../assets/uz-list-title-6-uz.png",
+    "heading7": "../../assets/uz-list-title-7-uz.png",
+    "heading8": "../../assets/uz-list-title-8-uz.png",
+    "subheading1": "../../assets/uz-list-subtitle-1-uz.png",
+    "subheading2": "../../assets/uz-list-subtitle-2-uz.png",
+    "subheading3": "../../assets/uz-list-subtitle-3-uz.png",
+    "subheading4": "../../assets/uz-list-subtitle-4-uz.png",
+    "subheading5": "../../assets/uz-list-subtitle-5-uz.png",
+    "subheading6": "../../assets/uz-list-subtitle-6-uz.png",
+    "mobHeading1": "../../assets/uz-list-title-mob-1-uz.png",
+    "mobHeading2": "../../assets/uz-list-title-mob-2-uz.png",
+    "mobHeading3": "../../assets/uz-list-title-mob-3-uz.png",
+    "mobHeading4": "../../assets/uz-list-title-mob-4-uz.png",
+    "mobHeading5": "../../assets/uz-list-title-mob-5-uz.png",
+    "mobHeading6": "../../assets/uz-list-title-mob-6-uz.png",
+    "mobHeading7": "../../assets/uz-list-title-mob-7-uz.png",
+    "mobHeading8": "../../assets/uz-list-title-mob-8-uz.png",
+    "mobSubheading1": "../../assets/uz-list-subtitle-mob-1-uz.png",
+    "mobSubheading2": "../../assets/uz-list-subtitle-mob-2-uz.png",
+    "mobSubheading3": "../../assets/uz-list-subtitle-mob-3-uz.png",
+    "mobSubheading4": "../../assets/uz-list-subtitle-mob-4-uz.png",
+    "mobSubheading5": "../../assets/uz-list-subtitle-mob-5-uz.png",
+    "mobSubheading6": "../../assets/uz-list-subtitle-mob-6-uz.png"
+  },
+  "thirdBlock": {
+    "cafe": "../../assets/uz-title-blue-uz.png"
+  },
+  "form": {
+    "formTitle": "../../assets/uz-form-heading-uz.png",
+    "formConfirm": "../../assets/uz-phone-confirm-button-uz.png",
+    "city":  "../../assets/uz-city-label-uz.png",
+    "number":  "../../assets/uz-number-label-uz.png",
+    "gender":  "../../assets/uz-gender-label-uz.png",
+    "age":  "../../assets/uz-age-label-uz.png",
+    "phoneConfirm":  "../../assets/uz-phone-confirm-text-uz.png",
+    "phoneConfirmMob":  "../../assets/uz-phone-confirm-text-mob-uz.png",
+    "approve":  "../../assets/uz-approve-uz.png",
+    "firstCheck":  "../../assets/uz-first-check-uz.png",
+    "secondCheck":  "../../assets/uz-second-check-uz.png",
+    "otpForm":  "../../assets/uz-form-confirm-uz.png",
+    "male":  "erkak",
+    "female":  "ayol",
+    "older":  "Ko'proq",
+    "cities": "../../uz-cities-uz.json",
+    "confirmLabel": "../../assets/uz-confirm-label-uz.png",
+    "fullName": "Sizning familiyangiz va ismingiz"
+  },
+  "share": {
+    "title": "../../assets/uz-share-title-uz.png",
+    "subtitle": "../../assets/uz-share-subtitle-uz.png",
+    "mobTitle": "../../assets/uz-share-title-mob-uz.png",
+    "mobSubtitle": "../../assets/uz-share-subtitle-mob-uz.png"
+  },
+  "thanks": {
+  "uztitle": "../../assets/uz-link-uz.png",
+  "uztitlemob": "../../assets/uz-link-mob-uz.png"
+}
+}
